@@ -1,0 +1,4 @@
+Resultados/artu/main/evento.c: In function ‘trocarDataEvento’:
+Resultados/artu/main/evento.c:35:15: warning: comparison between pointer and integer
+   35 |     if (troca > numEventos)
+      |               ^
