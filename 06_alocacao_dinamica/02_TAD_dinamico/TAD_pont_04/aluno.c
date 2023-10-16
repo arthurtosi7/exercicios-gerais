@@ -6,6 +6,11 @@
 tAluno* CriaAluno()
 {
     tAluno *p_aluno;
+    p_aluno = (tAluno *) malloc(sizeof(tAluno));
+    if (p_aluno == NULL){
+        printf ("ERRO DE MEMORIA EM CRIA ALUNO\n");
+        exit(0);
+    }
     p_aluno->nome = NULL;
     p_aluno->matricula = -1;
     p_aluno->n1 = -1;
