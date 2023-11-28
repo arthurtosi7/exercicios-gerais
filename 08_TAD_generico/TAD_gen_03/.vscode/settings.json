@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "relatorio.h": "c",
+        "algorithm": "c",
+        "stdio.h": "c"
+    }
+}

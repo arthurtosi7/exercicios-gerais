@@ -1,6 +1,7 @@
 #include "aluno.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 struct Aluno
 {
@@ -22,14 +23,20 @@ tAluno *CriaAluno()
 
 void DestroiAluno(data_type aluno)
 {
-    tAluno* alunoo = aluno
-    free((tAluno *)aluno);
+    tAluno* alunoo = (tAluno*)aluno;
+    free(alunoo->nome);
+    free(alunoo);
 }
 
 
 void LeAluno(tAluno *aluno)
 {
-    scanf ("%s;%c;%f\n", aluno->nome, &aluno->genero, &aluno->nota);
+    char nome[50];
+    scanf ("%[^;]", nome);
+    aluno->nome = (char*) malloc ((strlen(nome)+1) * sizeof (char));
+    strcpy (aluno->nome, nome);
+    scanf (";%c;%f", &aluno->genero, &aluno->nota);
+    scanf ("%*c");
 }
 
 
